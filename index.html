@@ -15,7 +15,11 @@
     <div class="modal">
       <button class="btn__close" type="button"></button>
       <div class="img__wrapper">
-        <img class="img" src="./images/happy-min.png" alt="cozy fillings">
+        <picture>
+          <source media="(min-width: 1170px)" srcset="./images/wallpaper-min.jpg">
+          <source media="(min-width: 768px)" srcset="./images/happy-min.png">
+          <img class="img" src="./images/happy-min.png" alt="cozy fillings">
+        </picture>
       </div>
       <div class="modal-content__wrapper">
         <div class="logo">
