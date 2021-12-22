@@ -28,8 +28,15 @@
         <p class="title__text">fuel your body and mind</p>
         <p class="discount__text">15% off</p>
         <p class="order__text">your first order</p>
+        <fieldset class="timer">
+          <span id="timer">00:00</span>
+          <legend class="legend__minutes">M</legend>
+        </fieldset>
         <form class="form">
-          <input class="input__field" type="email" name="email" placeholder="Email Adress">
+          <div class="input__wrapper">
+            <img class="email__icon" src="./images/email-icon.svg" alt="email-icon" width="24" height="24">
+            <input class="input__field" type="email" name="email" placeholder="Email Adress">
+          </div>
           <button class="btn__submit" type="submit">submit</button>
           <button class="btn" type="button">click</button>
         </form>
@@ -37,5 +44,6 @@
       </div>
     </div>
   </div>
+  <script src="./js/index.js"></script>
 </body>
 </html>

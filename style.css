@@ -1,3 +1,8 @@
+:root {
+  --primary-color: rgb(250, 95, 39);
+  --secondaty-text-color: white;
+}
+
 body {
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -31,11 +36,11 @@ p {
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   width: 250px;
   padding: 20px;
   text-align: center;
-  background-color: white;
+  background-color: var(--secondaty-text-color);
 }
 
 .btn__close {
@@ -56,7 +61,7 @@ p {
   display: inline-block;
   padding: 5px;
   margin-bottom: 20px;
-  background-color: rgb(250, 95, 39);
+  background-color: var(--primary-color);
 }
 
 .logo__text {
@@ -83,9 +88,48 @@ p {
   margin-bottom: 10px;
 }
 
+.timer {
+  width: 50px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  border: solid 2px var(--primary-color);
+  color: var(--primary-color);
+}
+
+.timer:after,
+.legend__minutes {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  padding: 0 5px;
+  background-color: var(--secondaty-text-color);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.timer:after {
+  content: "S";
+  left: 70%;
+}
+
+.legend__minutes {
+  left: 30%;
+}
+
+#timer {
+  font-size: 22px;
+  font-weight: 700;
+}
+
 .form {
   display: flex;
   flex-direction: column;
+}
+
+.input__wrapper {
+  position: relative;
+  width: 215px;
 }
 
 .input__field {
@@ -94,7 +138,13 @@ p {
   border-bottom: solid 1px grey;
   padding: 5px 5px 5px 30px;
   margin-bottom: 10px;
-  background: url(./images/email-icon.svg) no-repeat left;
+  width: 100%;
+}
+
+.email__icon {
+  position: absolute;
+  top: 2px;
+  left: 2px;
 }
 
 .btn__submit {
@@ -103,8 +153,8 @@ p {
   border: none;
   text-transform: uppercase;
   font-size: 18px;
-  background-color: rgb(250, 95, 39);
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--secondaty-text-color);
 }
 
 .btn {
